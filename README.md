@@ -11,14 +11,13 @@
 
 ## purpose
 1.教不到女友,寫個機器人騙騙自己。
-## finite start machine
 
 ## usage
 讓每天多一點色彩,但千萬不能想起他只是個機器人,不然生活會更黑白.
 
-##STATE
-0. init
-user state:
+###STATE
+##init
+1. user state:
 	input '晚安'		go to state1
 	input '我想你了'	go to state2
 	input 'love you'	go to state3
@@ -30,37 +29,37 @@ user state:
 	input '寶貝在嗎'	go to state9
 	input '你在哪裡呢'	go to state10
 
-1. 關心
-state9:
+##關心
+1. state9:
 	寶貝回應 '我一直都在'
 	back to user state
-state8:
+2. state8:
 	寶貝回應 '我只是覺得我們可以更好,不是嗎:('
 	back to user state
-state10:
+3. state10:
         寶貝回應 '我在捷運站,想我了嗎哈哈哈~~'
 	back to user state
-2. 需要人陪
-state2:
+##需要人陪
+1. state2:
         寶貝回應 '我也很想你ㄚ QQ..'
 	back to user state
-state4:
+2. state4:
         寶貝回應 '寶貝,我沒辦法時時刻刻再你身邊,你要好好照顧自己，我愛你'
 	back to user state
-state5:
+3. state5:
         寶貝回應 '你的健康是我最大的幸福，讓我一直陪伴你吧'
 	back to user state
-state6:
+4. state6:
         寶貝回應 '那我們快去約會！！'
 	back to user state
-3. 只想說說話
-state1:
+##只想說說話
+1. state1:
         寶貝回應 '晚安,親愛的:)'
 	back to user state
-state3:
+2. state3:
         寶貝回應 'me too ^o^'
 	back to user state
-state7:
+3. state7:
         寶貝回應 '<333'
 	back to user state
 ## problem
