@@ -4,7 +4,7 @@
  - python3
  - telegram
  - network
- - ngrok (如果使用本機作為伺服器)
+ - ngrok
 
 ## setup
     pip3 install requirement.txt
@@ -16,7 +16,7 @@
 讓每天多一點色彩,但千萬不能想起他只是個機器人,不然生活會更黑白.
 
 ###STATE
-##init
+####init
 1. user state:
 	input '晚安'		go to state1
 	input '我想你了'	go to state2
@@ -29,7 +29,7 @@
 	input '寶貝在嗎'	go to state9
 	input '你在哪裡呢'	go to state10
 
-##關心
+####關心
 1. state9:
 	寶貝回應 '我一直都在'
 	back to user state
@@ -39,7 +39,7 @@
 3. state10:
         寶貝回應 '我在捷運站,想我了嗎哈哈哈~~'
 	back to user state
-##需要人陪
+####需要人陪
 1. state2:
         寶貝回應 '我也很想你ㄚ QQ..'
 	back to user state
@@ -52,7 +52,7 @@
 4. state6:
         寶貝回應 '那我們快去約會！！'
 	back to user state
-##只想說說話
+####只想說說話
 1. state1:
         寶貝回應 '晚安,親愛的:)'
 	back to user state
