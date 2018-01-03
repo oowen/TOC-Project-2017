@@ -15,8 +15,8 @@
 ## usage
 讓每天多一點色彩,但千萬不能想起他只是個機器人,不然生活會更黑白.
 
-##STATE<br>
-###init
+## STATE<br>
+### init
 1. user state:
  - 	input '晚安'		go to state1
  - 	input '我想你了'	go to state2
@@ -28,7 +28,7 @@
  - 	input '你在生氣嗎'	go to state8
  - 	input '寶貝在嗎'	go to state9
  - 	input '你在哪裡呢'	go to state10
-###關心
+### 關心
 1. state9:
 	寶貝回應 '我一直都在'
 	back to user state
@@ -38,7 +38,7 @@
 3. state10:
         寶貝回應 '我在捷運站,想我了嗎哈哈哈~~'
 	back to user state
-###需要人陪
+### 需要人陪
 1. state2:
         寶貝回應 '我也很想你ㄚ QQ..'
 	back to user state
