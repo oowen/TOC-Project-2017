@@ -8,7 +8,7 @@ from fsm import TocMachine
 
 
 API_TOKEN ='520011064:AAG9VjLMsmD-u04WyCyT1_qPzSfuzXvXxyg'
-WEBHOOK_URL = 'https://15643735.ngrok.io/hook'
+WEBHOOK_URL = 'https://590be4f2.ngrok.io/hook'
 
 app = Flask(__name__)
 bot = telegram.Bot(token=API_TOKEN)
@@ -126,7 +126,7 @@ def webhook_handler():
     return 'ok'
 
 
-@app.route('/show-fsm', methods=['GET'])#fsm 
+@app.route('/show-fsm', methods=['GET']) 
 def show_fsm():
     byte_io = BytesIO()
     machine.graph.draw(byte_io, prog='dot', format='png')

@@ -1,61 +1,71 @@
-# TOC Project 2017
+# Love bot
 
-Template Code for TOC Project 2017
+## prerequirement
+ - python3
+ - telegram
+ - network
+ - ngrok (如果使用本機作為伺服器)
 
-A telegram bot based on a finite state machine
+## setup
+    pip3 install requirement.txt
 
-## Setup
+## purpose
+1.教不到女友,寫個機器人騙騙自己。
+## finite start machine
 
-### Prerequisite
-* Python 3
+## usage
+讓每天多一點色彩,但千萬不能想起他只是個機器人,不然生活會更黑白.
 
-#### Install Dependency
-```sh
-pip install -r requirements.txt
-```
+##STATE
+0. init
+user state:
+	input '晚安'		go to state1
+	input '我想你了'	go to state2
+	input 'love you'	go to state3
+	input '我很難過'	go to state4
+	input '我生病了'	go to state5
+	input '今天天氣真好'	go to state6
+	input '<3'		go to state7
+	input '你在生氣嗎'	go to state8
+	input '寶貝在嗎'	go to state9
+	input '你在哪裡呢'	go to state10
 
-* pygraphviz (For visualizing Finite State Machine)
-    * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
-
-### Secret Data
-
-`API_TOKEN` and `WEBHOOK_URL` in app.py **MUST** be set to proper values.
-Otherwise, you might not be able to run your code.
-
-### Run Locally
-You can either setup https server or using `ngrok` as a proxy.
-
-**`ngrok` would be used in the following instruction**
-
-```sh
-ngrok http 5000
-```
-
-After that, `ngrok` would generate a https URL.
-
-You should set `WEBHOOK_URL` (in app.py) to `your-https-URL/hook`.
-
-#### Run the sever
-
-```sh
-python3 app.py
-```
-
-## Finite State Machine
-![fsm](./img/show-fsm.png)
-
-## Usage
-The initial state is set to `user`.
-
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-
-* user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
-
-
-## Author
-[Lee-W](https://github.com/Lee-W)
+1. 關心
+state9:
+	寶貝回應 '我一直都在'
+	back to user state
+state8:
+	寶貝回應 '我只是覺得我們可以更好,不是嗎:('
+	back to user state
+state10:
+        寶貝回應 '我在捷運站,想我了嗎哈哈哈~~'
+	back to user state
+2. 需要人陪
+state2:
+        寶貝回應 '我也很想你ㄚ QQ..'
+	back to user state
+state4:
+        寶貝回應 '寶貝,我沒辦法時時刻刻再你身邊,你要好好照顧自己，我愛你'
+	back to user state
+state5:
+        寶貝回應 '你的健康是我最大的幸福，讓我一直陪伴你吧'
+	back to user state
+state6:
+        寶貝回應 '那我們快去約會！！'
+	back to user state
+3. 只想說說話
+state1:
+        寶貝回應 '晚安,親愛的:)'
+	back to user state
+state3:
+        寶貝回應 'me too ^o^'
+	back to user state
+state7:
+        寶貝回應 '<333'
+	back to user state
+## problem
+1. 傳送的詞語必須明確
+2. 寶貝只會說這幾句話,很快就膩了
+## next objective
+1. 寶貝會傳自拍照 
+2. 對話更人性化
