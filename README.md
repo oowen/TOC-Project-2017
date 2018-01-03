@@ -51,7 +51,7 @@
 4. state6:
         寶貝回應 '那我們快去約會！！'
 	back to user state
-###只想說說話
+### 只想說說話
 1. state1:
         寶貝回應 '晚安,親愛的:)'
 	back to user state
